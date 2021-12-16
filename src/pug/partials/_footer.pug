@@ -1,0 +1,18 @@
+footer.footer
+  .container.footer-inner
+    .footer-anim
+      img(src="static/anim.gif", alt="").footer-anim__item
+    
+    .footer-wrapper
+      .footer-title
+        h2.footer-title__item
+          | Пожалуйста, свяжитесь с&nbsp;нами.
+        p.footer-title__sup
+          | Please, contact us.
+      
+      .footer-info
+        +link( { colorInverse: true, className: 'footer-info__link footer-info__email', icon: 'mail.svg', href: 'mailto:hireus@arc-fitout.com', text: 'hireus@arc-fitout.com' } )
+
+        +link( { noLink: true, colorInverse: true, className: 'footer-info__link footer-info__address', icon: 'home.svg', text: 'ул. Маршала Рыбалко, 2к8, БЦ «Маршал», офис 708.' } )
+
+          

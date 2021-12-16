@@ -1,0 +1,11 @@
+mixin link(content)
+  if content.noLink
+    p.link.link--no(class=`${content.colorInverse?'link--inverse':''} ${content.className?content.className:''}`)
+      span.link__icon
+        img(src=`images/icons/${content.icon}`, alt="")
+      span.link__item=content.text
+  else
+    a.link(href=content.href class=`${content.colorInverse?'link--inverse':''} ${content.className?content.className:''}`)
+      span.link__icon
+        img(src=`images/icons/${content.icon}`, alt="")
+      span.link__item=content.text

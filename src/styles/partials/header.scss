@@ -1,0 +1,46 @@
+.header {
+  padding-top: 64px;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    width: 184px;
+  }
+
+  &-controls {
+    display: flex;
+    align-items: center;
+
+    &__phone {
+      margin-right: 146px;
+    }
+
+    &__audio {
+      position: relative;
+
+      &-item {
+        position: absolute;
+        bottom: -100px;
+        right: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &-icon {
+        opacity: 0.5;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
