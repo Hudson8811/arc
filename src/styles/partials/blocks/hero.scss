@@ -4,12 +4,31 @@
   padding-bottom: vw(113);
   align-self: center;
 
+  @include max(sm) {
+    padding: 40px 0 80px;
+  }
+
+  @include max(xs) {
+    padding: vw(40, 560) 0 vw(80, 560);
+  }
+
   .container {
-    //display: flex;
+    @include max(sm) {
+      display: flex;
+    }
   }
 
   &__wrapper {
     padding-left: vw(390);
+
+    @include max(sm) {
+      margin: 0 auto;
+      padding: 0 0 0 35px;
+    }
+
+    @include max(xs) {
+      padding-left: vw(35, 560);
+    }
   }
 
   &__title {
@@ -17,12 +36,32 @@
     max-width: vw(565);
     color: $black;
 
+    @include max(sm) {
+      max-width: 355px;
+    }
+
+    @include max(xs) {
+      max-width: vw(355, 560);
+    }
+
     &-icon {
       position: relative;
       top: 0;
       left: vw(-43);
       width: vw(43);
       margin-bottom: vw(32);
+
+      @include max(sm) {
+        left: -35px;
+        width: 35px;
+        margin-bottom: 26px;
+      }
+
+      @include max(xs) {
+        left: vw(-35, 560);
+        width: vw(35, 560);
+        margin-bottom: vw(26, 560);
+      }
 
       svg {
         display: block;
@@ -35,12 +74,32 @@
       margin-bottom: vw(25);
       font-weight: 700;
       font-size: vw(64);
-      line-height: vw(64);
+      line-height: 1;
+
+      @include max(sm) {
+        margin-bottom: 20px;
+        font-size: 52px;
+      }
+
+      @include max(xs) {
+        margin-bottom: vw(20, 560);
+        font-size: vw(52, 560);
+      }
     }
 
     &-sup {
       font-size: vw(24);
       line-height: vw(28);
+
+      @include max(sm) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @include max(sm) {
+        font-size: vw(20, 560);
+        line-height: vw(24, 560);
+      }
     }
   }
 }

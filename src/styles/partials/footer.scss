@@ -6,6 +6,16 @@
   &-anim {
     max-width: vw(1254);
     width: 100%;
+
+    @include max(sm) {
+      display: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 
   &-wrapper {
@@ -19,22 +29,46 @@
     padding: vw(32) vw(53) vw(69) vw(32);
     color: $white;
     background-color: $hky;
+
+    @include max(sm) {
+      position: static;
+      display: block;
+      width: 100%;
+      padding: 32px;
+    }
   }
 
   &-title {
     max-width: vw(300);
+
+    @include max(sm) {
+      display: none;
+      max-width: none;
+      margin-bottom: 24px;
+    }
 
     &__item {
       margin-bottom: vw(8);
       font-weight: 500;
       font-size: vw(24);
       line-height: vw(28);
+
+      @include max(sm) {
+        margin-bottom: 8px;
+        font-size: 24px;
+        line-height: 28px;
+      }
     }
 
     &__sup {
       font-weight: 500;
       font-size: vw(14);
       line-height: vw(20);
+
+      @include max(sm) {
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
   }
 
@@ -42,8 +76,16 @@
     &__link {
       max-width: vw(317);
 
+      @include max(sm) {
+        max-width: 317px;
+      }
+
       &:not(:last-child) {
         margin-bottom: vw(30);
+
+        @include max(sm) {
+          margin-bottom: 16px;
+        }
       }
     }
   }

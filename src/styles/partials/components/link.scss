@@ -7,6 +7,11 @@
   color: $black;
   transition: color 0.3s ease-in-out;
 
+  @include max(sm) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   @include hover {
     color: $hky;
   }
@@ -31,6 +36,16 @@
     width: vw(24);
     flex-shrink: 0;
     margin-right: vw(21);
+
+    @include max(sm) {
+      width: 24px;
+      margin-right: 21px;
+    }
+
+    @include max(xs) {
+      width: 20px;
+      margin-right: 16px;
+    }
 
     img {
       display: block;

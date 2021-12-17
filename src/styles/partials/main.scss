@@ -23,5 +23,10 @@ body {
   &--vw {
     max-width: vw(1440);
     padding: 0 vw(64) 0 vw(35);
+
+    @include max(sm) {
+      max-width: none;
+      padding: 0 20px;
+    }
   }
 }

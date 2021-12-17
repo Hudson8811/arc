@@ -1,6 +1,10 @@
 .header {
   padding-top: vw(64);
 
+  @include max(sm) {
+    padding-top: 32px;
+  }
+
   &-wrapper {
     display: flex;
     align-items: center;
@@ -9,6 +13,14 @@
 
   &-logo {
     width: vw(184);
+
+    @include max(sm) {
+      width: 140px;
+    }
+
+    @include max(xs) {
+      width: 100px;
+    }
 
     img {
       display: block;
@@ -23,10 +35,28 @@
 
     &__phone {
       margin-right: vw(146);
+
+      @include max(sm) {
+        margin-right: 80px;
+      }
+
+      @include max(xs) {
+        margin-right: 24px;
+      }
+
+      @include max(xxs) {
+        margin-right: 0;
+      }
     }
 
     &__audio {
       position: relative;
+
+      @include max(xxs) {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
 
       &-item {
         position: absolute;
@@ -36,6 +66,10 @@
         height: 0;
         opacity: 0;
         pointer-events: none;
+
+        @include max(sm) {
+          bottom: -100px;
+        }
       }
 
       &-icon {
@@ -44,6 +78,14 @@
         opacity: 0.5;
         transition: opacity 0.3s ease-in-out;
         cursor: pointer;
+
+        @include max(sm) {
+          width: 24px;
+        }
+
+        @include max(xs) {
+          width: 20px;
+        }
 
         &.active {
           opacity: 1;
