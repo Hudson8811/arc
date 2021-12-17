@@ -6,7 +6,13 @@
   margin-top: -$gutter-top;
 }
 
-@mixin flex-block($min-width, $gutter-left, $gutter-top, $last-equal: false, $max-cols: 3) {
+@mixin flex-block(
+  $min-width,
+  $gutter-left,
+  $gutter-top,
+  $last-equal: false,
+  $max-cols: 3
+) {
   flex: 1 0 $min-width;
   margin-left: $gutter-left;
   margin-top: $gutter-top;
@@ -54,6 +60,10 @@
   @media only screen and (min-width: $width + "px") {
     @content;
   }
+}
+
+@function vw($px, $resolutiond: 1920) {
+  @return (($px/$resolutiond) * 100) + vw;
 }
 
 @mixin hover {

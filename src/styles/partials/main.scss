@@ -1,14 +1,27 @@
 body {
+  display: flex;
+  flex-direction: column;
   font-family: $mainFont;
   font-style: normal;
   font-weight: 500;
   color: $black;
   background-color: $white;
+
+  main {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+  }
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1440px;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0 64px 0 35px;
+
+  &--vw {
+    max-width: vw(1440);
+    padding: 0 vw(64) 0 vw(35);
+  }
 }

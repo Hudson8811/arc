@@ -1,5 +1,5 @@
 .header {
-  padding-top: 64px;
+  padding-top: vw(64);
 
   &-wrapper {
     display: flex;
@@ -8,7 +8,13 @@
   }
 
   &-logo {
-    width: 184px;
+    width: vw(184);
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 
   &-controls {
@@ -16,7 +22,7 @@
     align-items: center;
 
     &__phone {
-      margin-right: 146px;
+      margin-right: vw(146);
     }
 
     &__audio {
@@ -24,7 +30,7 @@
 
       &-item {
         position: absolute;
-        bottom: -100px;
+        bottom: vw(-100);
         right: 0;
         width: 0;
         height: 0;
@@ -33,12 +39,20 @@
       }
 
       &-icon {
+        display: block;
+        width: vw(24);
         opacity: 0.5;
-        transition: 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
         cursor: pointer;
 
         &.active {
           opacity: 1;
+        }
+
+        svg {
+          display: block;
+          width: 100%;
+          height: auto;
         }
       }
     }

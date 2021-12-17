@@ -1,30 +1,46 @@
 .hero {
-  padding-top: 32px;
-  padding-bottom: 113px;
-  padding-left: 390px;
+  width: 100%;
+  padding-top: vw(32);
+  padding-bottom: vw(113);
+  align-self: center;
+
+  .container {
+    //display: flex;
+  }
+
+  &__wrapper {
+    padding-left: vw(390);
+  }
 
   &__title {
     position: relative;
-    max-width: 565px;
+    max-width: vw(565);
     color: $black;
 
     &-icon {
       position: relative;
       top: 0;
-      left: -43px;
-      margin-bottom: 32px;
+      left: vw(-43);
+      width: vw(43);
+      margin-bottom: vw(32);
+
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
     }
 
     &-item {
-      margin-bottom: 25px;
+      margin-bottom: vw(25);
       font-weight: 700;
-      font-size: 64px;
-      line-height: 64px;
+      font-size: vw(64);
+      line-height: vw(64);
     }
 
     &-sup {
-      font-size: 24px;
-      line-height: 28px;
+      font-size: vw(24);
+      line-height: vw(28);
     }
   }
 }

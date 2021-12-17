@@ -1,11 +1,11 @@
 .link {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: vw(14);
+  line-height: vw(20);
   text-decoration: none;
   color: $black;
-  transition: 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 
   @include hover {
     color: $hky;
@@ -28,7 +28,14 @@
   }
 
   &__icon {
+    width: vw(24);
     flex-shrink: 0;
-    margin-right: 21px;
+    margin-right: vw(21);
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 }
